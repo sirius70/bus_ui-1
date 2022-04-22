@@ -50,7 +50,7 @@ class _LocationState extends State<Location> {
             icon: image,
             position: LatLng(LatLng["lat"], LatLng["lng"]));
         setState(() {
-          _markers[MarkerId("ID")] = marker;
+          _markers[MarkerId("ID")] = marker as MarkerId;
         });
       });
     } catch (e) {
