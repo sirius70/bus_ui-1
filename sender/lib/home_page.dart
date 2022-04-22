@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
@@ -26,7 +25,7 @@ class _HomepageState extends State<Homepage> {
   Future<void> initSocket() async {
     try {
       //TODO: add uri
-      socket = IO.io("http://192.168.1.2:3700", <String, dynamic>{
+      socket = IO.io("http://139.59.7.189:49154", <String, dynamic>{
         'transports': ['websocket'],
         'autoConnect': true
       });

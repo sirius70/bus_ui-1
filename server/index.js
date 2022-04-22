@@ -3,7 +3,7 @@ const server = http.createServer();
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-const PORT = process.env.PORT || 3700;
+const PORT = process.env.PORT || 49154;
 
 io.on('connection', (socket) => {
     socket.on("position-change", (data) =>{
@@ -17,6 +17,6 @@ io.on('connection', (socket) => {
 });
 
 server.listen(PORT, ()=>{
-    console.log("listening on $PORT");
+    console.log("listening on ${PORT}");
 });
 
