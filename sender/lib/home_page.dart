@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
-void main() => runApp(Homepage());
+
 
 class Homepage extends StatefulWidget {
   @override
@@ -31,7 +31,11 @@ class _HomepageState extends State<Homepage> {
       });
       socket.connect();
 
-      socket.onConnect((data) => {print('Connect: ${socket.id}')});
+
+      socket.onConnect((data) => {
+
+        print('Connect: ${socket.id}')});
+
     } catch (e) {
       print(e.toString());
     }
@@ -84,7 +88,8 @@ class _HomepageState extends State<Homepage> {
                         if (validateandSave()) {
                           var coords = {"lat": latitude, "long": longitude};
 
-                          socket.emit("position-changed", jsonEncode(coords));
+                          socket.emit("join", "123");
+                          socket.emit("123",jsonEncode(coords));
                         }
                       },
                     )
