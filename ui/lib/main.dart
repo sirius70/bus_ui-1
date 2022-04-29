@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui/screens/Info.dart';
 import 'package:ui/screens/drawer.dart';
 import 'package:ui/screens/signup.dart';
-import 'work2/work2_main.dart';
+import 'work2/watermark_stamp/example.dart';
 
 void main() {
   runApp(const MyApp());
